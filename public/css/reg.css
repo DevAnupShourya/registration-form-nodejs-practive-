@@ -1,0 +1,53 @@
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+section .row_1 {
+  width: 25%;
+}
+section .row_1 h1 {
+  font-size: 3rem;
+  margin-bottom: 100px;
+}
+section .row_1 a {
+  font-weight: 600;
+  color: var(--text_color);
+}
+section .row_2 {
+  width: 70%;
+}
+section .row_2 form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.row_2 form label {
+  font-weight: 800;
+}
+.row_2 form input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  font-weight: 600;
+}
+.row_2 div{
+  padding: 5%;
+}
+.row_2 .submit_box button {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0px;
+  background-color: var(--text_color);
+  color: var(--main_bg_color);
+  border: 2px solid var(--text_color);
+  transition: all 1s 0ms ease-in-out;
+}
+.row_2 .submit_box button:hover {
+  background-color: var(--main_bg_color);
+  color: var(--text_color);
+}

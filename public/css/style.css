@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Caviar Dreams";
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --text_color: #000000;
+  --main_bg_color: #ffffff;
+  --other_bg_color: grey;
+}
+#page {
+  height: 100vh;
+  background-color: var(--main_bg_color);
+  color: var(--text_color);
+  padding: 0% 5%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+#logo {
+  width: 20%;
+}
+#logo h1 a {
+  font-size: 3rem;
+  color: black;
+}
+#links {
+  width: 30%;
+  text-align: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#links a {
+  font-weight: 900;
+  padding: 10px 30px;
+  color: var(--text_color);
+  border-left: 10px solid var(--main_bg_color);
+  transition: all 1s 0ms ease-in-out;
+}
+#links a:hover {
+  border-left: 10px solid var(--text_color);
+}
+section {
+  padding: 8%;
+}
+footer {
+  text-align: center;
+  padding: 2%;
+}
