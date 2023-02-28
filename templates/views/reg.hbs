@@ -1,0 +1,41 @@
+{{>nav}}
+<link rel="stylesheet" href="css/reg.css">
+<section>
+    <div class="row_1">
+        <h1>First Time Here 👏🏻</h1>
+        <span>Already Have Account</span>
+        <a href="/login">Login</a>
+    </div>
+    <div class="row_2">
+        <form action="/reg" method="post">
+            <div>
+                <label for="name">Name</label> <br>
+                <input type="text" name="name" placeholder="Edward Jhon" autocomplete="username">
+            </div>
+            <div>
+                <label for="mail">Email</label> <br>
+                <input type="email" name="email" placeholder="jhon@edward.com" autocomplete="email">
+            </div>
+            <div>
+                <label for="phone">Phone</label> <br>
+                <input type="tel" name="phone" placeholder="9876543210" autocomplete="tel">
+            </div>
+            <div class="age_box">
+                <label for="age">Age</label> <br>
+                <input type="number" name="age" placeholder="18" >
+            </div>
+            <div>
+                <label for="password">Password</label> <br>
+                <input type="password" name="password" placeholder="mypassword123" autocomplete="new-password">
+            </div>
+            <div>
+                <label for="conf_pass">Confirm Password</label> <br>
+                <input type="password" name="conf_pass" placeholder="mypassword123" autocomplete="new-password">
+            </div>
+            <div class="submit_box">
+                <button type="submit">Register ↗</button>
+            </div>
+        </form>
+    </div>
+</section>
+{{>footer}}

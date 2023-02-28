@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 // ? warnings 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://localhost:27017/db1')
+const db_name = 'reg_form';
+
+mongoose.connect(`mongodb://127.0.0.1:27017/${db_name}`)
 .then(() => {
-    console.log(`connected to 'reg_form' database.......`);
+    console.log(`Connected to db:${db_name}`);
+}).catch(() => {
+    console.log('Database Connection failed!!!');
 })
-.catch((e) => {
-    console.log(`connetion unseccesful! error : ${e}`);  
-});
