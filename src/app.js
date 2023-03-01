@@ -30,6 +30,24 @@ app.get('/login', (req, res) => {
     // res.send('<h1>This is is login page</h1>')
     res.render('login');
 });
+app.post('/login', async (req, res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+        
+        // ? checking that email is available in datanase or not
+        const userEmail = await Register.findOne({email});
+        if(userEmail.password === password){
+            res.status(201).render('index');
+        }else{
+            res.send("Invalid Details!!")
+        }
+
+    } catch (error) {
+        res.status(400).send(`Error : ${error}`)
+    }
+    
+});
 app.get('/reg', (req, res) => {
     // res.send('<h1>This is is registrations page</h1>')
     res.render('reg');
